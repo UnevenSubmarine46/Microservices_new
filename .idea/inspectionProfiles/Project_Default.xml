@@ -1,0 +1,19 @@
+<component name="InspectionProjectProfileManager">
+  <profile version="1.0">
+    <option name="myName" value="Project Default" />
+    <inspection_tool class="PyUnresolvedReferencesInspection" enabled="true" level="WARNING" enabled_by_default="true">
+      <option name="ignoredIdentifiers">
+        <list>
+          <option value="pyqt5.window" />
+          <option value="pyqt5.QtWidgets" />
+          <option value="PyQt5.QtWidgets.QWidget.QWidget.setWindowTitle" />
+          <option value="PyQt5.QtWidgets.QWidget.QWidget.show" />
+          <option value="PyQt5.QtWidgets.QDialog.QDialog.setWindowTitle" />
+          <option value="PyQt5.QtWidgets.QDialog.QDialog.show" />
+          <option value="pyqt5.MainPage.setWindowTitle" />
+          <option value="pyqt5.MainPage.show" />
+        </list>
+      </option>
+    </inspection_tool>
+  </profile>
+</component>

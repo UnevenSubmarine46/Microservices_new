@@ -1,0 +1,22 @@
+version: '3'
+
+services:
+ cars:
+    container_name: cars
+    build: ./cars
+    ports:
+      - "8080:80"
+    networks:
+      - app-network
+
+ parts:
+    container_name: parts
+    build: ./parts
+    ports:
+      - "8081:80"
+    networks:
+      - app-network
+
+networks:
+ app-network:
+    driver: bridge
