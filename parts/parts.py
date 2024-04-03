@@ -42,7 +42,7 @@ def get_db():
         yield db
     finally:
         db.close()
-
+#
 # Маршрут для создания записи
 @app.post("/parts/", response_model=partsModel)
 async def create_part(part: partsModel, db: Session = Depends(get_db)):
@@ -52,7 +52,9 @@ async def create_part(part: partsModel, db: Session = Depends(get_db)):
     db.refresh(db_part)
     return db_part
 
+
 # Маршрут для чтения всех записей
+
 @app.get("/parts/", response_model=List[partsModel])
 async def read_parts(db: Session = Depends(get_db)):
     return db.query(parts).all()
