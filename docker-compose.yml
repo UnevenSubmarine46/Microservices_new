@@ -1,6 +1,15 @@
 version: '3'
 
 services:
+ database:
+    image: postgres
+    restart: always
+    environment:
+      POSTGRES_USER: test_user
+      POSTGRES_PASSWORD: test_password
+      POSTGRES_DB: test_db
+    ports:
+      - "5432:5432"
  cars:
     container_name: cars
     build: ./cars
