@@ -25,6 +25,21 @@ services:
       - "8081:80"
     networks:
       - app-network
+ keycloak:
+   image: quay.io/keycloak/keycloak:23.0.6
+   ports:
+     - "8180:8080"
+   volumes:
+     - ./keycloak:/opt/keycloak/data/import
+   container_name: keycloak
+   networks:
+     - app-network
+   command: -v start-dev
+   environment:
+     KEYCLOAK_ADMIN: admin
+     KEYCLOAK_ADMIN_PASSWORD: 12345
+
+
 
 networks:
  app-network:
